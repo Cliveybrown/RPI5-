@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <title>Dorothy's Delicious Ginger Biscuits</title>
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#f8edd3"/>
+      <stop offset="70%" stop-color="#efdcb1"/>
+      <stop offset="100%" stop-color="#d9bd85"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.3  0 0 0 0 0.15  0 0 0 0.18 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <path id="arcTop" d="M 210 300 A 240 170 0 0 1 690 300"/>
+    <path id="arcBottom" d="M 133 300 A 317 219 0 0 0 767 300"/>
+    <g id="star"><path d="M0,-9 L2.6,-2.8 9,-2.8 3.8,1.2 5.8,7.5 0,3.6 -5.8,7.5 -3.8,1.2 -9,-2.8 -2.6,-2.8Z"/></g>
+    <g id="flourish" fill="none" stroke="#7a1f16" stroke-width="2.2" stroke-linecap="round">
+      <path d="M0,0 C30,-18 60,-18 85,0 C100,10 115,8 122,0"/>
+      <path d="M0,0 C30,18 60,18 85,0"/>
+      <circle cx="130" cy="0" r="4" fill="#7a1f16"/>
+      <path d="M40,-10 c6,-12 18,-14 24,-6" />
+      <path d="M40,10 c6,12 18,14 24,6" />
+    </g>
+  </defs>
+
+  <!-- background card -->
+  <rect x="10" y="10" width="880" height="580" rx="28" fill="#5a1610"/>
+  <rect x="22" y="22" width="856" height="556" rx="20" fill="url(#paper)"/>
+  <rect x="22" y="22" width="856" height="556" rx="20" fill="#000" filter="url(#grain)"/>
+  <rect x="38" y="38" width="824" height="524" rx="14" fill="none" stroke="#7a1f16" stroke-width="3"/>
+  <rect x="48" y="48" width="804" height="504" rx="10" fill="none" stroke="#7a1f16" stroke-width="1.2" stroke-dasharray="2 5"/>
+
+  <!-- corner ornaments -->
+  <g fill="#7a1f16">
+    <use href="#star" x="70" y="70"/><use href="#star" x="830" y="70"/>
+    <use href="#star" x="70" y="530"/><use href="#star" x="830" y="530"/>
+  </g>
+
+  <!-- central oval -->
+  <ellipse cx="450" cy="300" rx="330" ry="232" fill="#7a1f16"/>
+  <ellipse cx="450" cy="300" rx="326" ry="228" fill="none" stroke="#e8c97a" stroke-width="1.5"/>
+  <ellipse cx="450" cy="300" rx="300" ry="205" fill="url(#paper)"/>
+  <ellipse cx="450" cy="300" rx="290" ry="195" fill="none" stroke="#7a1f16" stroke-width="1.5"/>
+
+  <!-- arched top text -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="6" fill="#7a1f16" font-weight="bold">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">DOROTHY'S</textPath>
+  </text>
+
+  <!-- small stars flanking -->
+  <g fill="#b8862b">
+    <use href="#star" x="268" y="196" transform="scale(1)"/>
+    <use href="#star" x="632" y="196"/>
+  </g>
+
+  <!-- main words -->
+  <text x="450" y="262" text-anchor="middle" font-family="'Brush Script MT', 'Lucida Handwriting', 'Apple Chancery', cursive"
+        font-style="italic" font-size="76" fill="#3d1e0e">Delicious</text>
+
+  <!-- ribbon banner -->
+  <g>
+    <path d="M118,290 L178,290 L163,320 L178,350 L118,350 L138,320 Z" fill="#5a1610"/>
+    <path d="M782,290 L722,290 L737,320 L722,350 L782,350 L762,320 Z" fill="#5a1610"/>
+    <path d="M165,280 Q450,262 735,280 L735,345 Q450,327 165,345 Z" fill="#9b2a1d" stroke="#e8c97a" stroke-width="2"/>
+    <text x="450" y="326" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold"
+          font-size="44" letter-spacing="8" fill="#f8edd3">GINGER</text>
+  </g>
+
+  <text x="450" y="398" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold"
+        font-size="50" letter-spacing="10" fill="#3d1e0e">BISCUITS</text>
+
+  <!-- flourishes under -->
+  <use href="#flourish" x="455" y="425"/>
+  <use href="#flourish" x="445" y="425" transform="translate(890 0) scale(-1 1)"/>
+  <circle cx="450" cy="425" r="5" fill="#b8862b"/>
+
+  <!-- arched bottom text -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="13" letter-spacing="4" fill="#e8c97a" font-style="italic">
+    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">· Baked by Hand · Finest Ingredients · Old Family Recipe ·</textPath>
+  </text>
+
+  <!-- side text -->
+  <text x="100" y="470" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#7a1f16">EST.</text>
+  <text x="100" y="492" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#7a1f16">1926</text>
+  <text x="800" y="470" text-anchor="end" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#7a1f16">NET WT.</text>
+  <text x="800" y="492" text-anchor="end" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#7a1f16">8 OZ</text>
+</svg>
